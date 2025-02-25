@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esse gato sou eu!</title>
+</head>
+<body>
+    <header>
+        <img src="" alt="logo">
+        <h1>Esse gato sou eu </h1>
+    </header>
+    <main>
+        <div class="container">
+            <div class="form">
+                <form action="/" method="post">
+                    <label for="">Insira seu nome:</label>
+                    <input type="text" name="nome"/>
+                    <button type="submit">Pesquisar</button>
+                    
+                </form>
+            </div>
+            <div class="gato">
+                {% if not url_imagem %}
+                    <img src="" alt="foto padrão pra quando não tem url de imagem da API">
+                {% else %}
+                    <img src="{{url_imagem}}" alt="gato">
+                    <p>{{nome}}</p>
+                {% endif%}
+                {% if erro %}
+                    <p>{{erro}}</p>
+                {% endif %}
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <p>Desenvolvido por um gato. Miau!</p>
+    </footer>
+    
+</body>
+</html>
