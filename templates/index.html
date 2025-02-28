@@ -28,7 +28,7 @@
             </div>
             <div class="gato">
                 {% if not url_imagem %}
-                    <img src="" alt="foto padrão pra quando não tem url de imagem da API">
+                    <img src="../static/img/fotosemgato.png" alt="foto padrão pra quando não tem url de imagem da API">
                 {% else %}
                     <img src="{{url_imagem}}" alt="gato">
                     <p>{{nome}}</p>
