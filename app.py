@@ -27,4 +27,4 @@ def index():
         return render_template('index.html', erro = "Falha de API, volte mais tarde!")
 
 if __name__ == '__main__':
-    app.run(debug=True) 
+    app.run() 
